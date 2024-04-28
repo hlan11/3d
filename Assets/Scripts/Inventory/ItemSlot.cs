@@ -20,6 +20,10 @@ public class ItemSlot : MonoBehaviour
             if (item.stackSize > 1)
             {
                 itemAmountText.text = item.stackSize.ToString();
+                //if (item.data.name == "Coin")
+                //{
+                //    itemAmountText.text=item.stackSize.ToString()+"00";
+                //}
             }
             else
             {

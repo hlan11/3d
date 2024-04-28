@@ -2,29 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 public class Health :  MonoBehaviour
 {
-    [SerializeField] private Slider maxHealth;
-    [SerializeField] private float currentHealth = 100;
-    //public InventoryButton inventoryButton;
-    private void Start()
+    [SerializeField] private UnityEvent onDie;
+    public UnityEvent<int, int> OnHealthChanged;
+    public int maxHP;
+    private int _healthpoint;
+
+    public int HealthPoint
     {
-        
+        get => _healthpoint;
+        set
+        {
+            _healthpoint = value;
+            OnHealthChanged.Invoke(_healthpoint, maxHP);
+        }
     }
-    private void OnCollisionEnter(Collision collision)
+    private bool isDead=> _healthpoint <= 0;
+    protected virtual void Start()
+    {
+        _healthpoint = maxHP;
+    }
+    public void OnCollisionEnter(Collision collision)
     {
         if (collision.collider.CompareTag("Obstacle"))
         {
-            Debug.Log("currentHealth - 10");
-            currentHealth -= 10;
+            _healthpoint -= 10;
         }
-    }
-    void UpdateSlider()
-    {
-        currentHealth = maxHealth.value;
-    }
-    private void Update()
-    {
-        UpdateSlider();
     }
 }
