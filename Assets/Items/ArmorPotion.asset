@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e523079375d284aba258092dfc2321, type: 3}
   m_Name: ArmorPotion
   m_EditorClassIdentifier: 
-  itemName: Armor
+  itemName: ArmorPotion
   Health: 0
   Mana: 0
   coins: 50

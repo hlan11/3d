@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e523079375d284aba258092dfc2321, type: 3}
   m_Name: ManaPotion
   m_EditorClassIdentifier: 
-  itemName: Mana
+  itemName: ManaPotion
   Health: 0
   Mana: 10
   coins: 40
