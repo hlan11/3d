@@ -27,7 +27,6 @@ public class moveByKey : MonoBehaviour
 
     void Update()
     {
-        checkDie();
         Flip();
         TurnCharacter();
         if (Input.GetMouseButtonDown(1))
@@ -86,13 +85,6 @@ public class moveByKey : MonoBehaviour
         }
 
         //anim.SetFloat("speed", (transform.position - p).magnitude / Time.deltaTime);
-    }
-    void checkDie()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            anim.SetTrigger("Die");
-        }
     }
     public void Flip()
     {
