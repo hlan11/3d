@@ -39,6 +39,7 @@ public class MoveByMouse : MonoBehaviour
         transform.position += vel;
             if (Vector3.Distance(transform.position, targetPosition) < 0.1f)
             {
+            Debug.Log("=========== stop walking");
                 anim.SetBool("isWalking", false);
             }
             if (Input.GetMouseButtonDown(0))

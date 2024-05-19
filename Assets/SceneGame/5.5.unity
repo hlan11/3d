@@ -2255,12 +2255,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 167114646}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.37, y: 1.5600004, z: -4.59}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.37, y: 9.96, z: -4.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 584880273}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &167114650
 MonoBehaviour:
@@ -2277,7 +2277,7 @@ MonoBehaviour:
   sensitivityX: 30
   sensitivityY: 0
   playerPos: {fileID: 584880273}
-  offset: {x: 0, y: 0, z: -2}
+  offset: {x: 0, y: 1.6, z: -2}
 --- !u!1001 &168470942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7251,7 +7251,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85ebdeac3b230594fa27c97ec970edc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivityX: 60
+  sensitivityX: 30
+  cameraRo: {fileID: 167114649}
+  offset: {x: 2, y: 2, z: 2}
+  anglePerSecond: 20
+  minPitch: -360
+  maxPitch: 360
 --- !u!1 &587988290
 GameObject:
   m_ObjectHideFlags: 0
@@ -19064,10 +19069,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 4807772044541664, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 167114649}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1253013051146282, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
       insertIndex: -1
@@ -21606,7 +21608,7 @@ Transform:
   m_GameObject: {fileID: 1904501442}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 8.4, z: 0}
+  m_LocalPosition: {x: 0, y: 8.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23363,7 +23365,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -713, y: 387}
+  m_AnchoredPosition: {x: -713, y: 389}
   m_SizeDelta: {x: 450, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2116825806
@@ -30079,3 +30081,4 @@ SceneRoots:
   - {fileID: 770184031}
   - {fileID: 1115501293}
   - {fileID: 1631475535}
+  - {fileID: 167114649}
