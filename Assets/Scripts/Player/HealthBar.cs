@@ -6,9 +6,31 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     [SerializeField] private Slider healthBar;
-    public void UpdateUI(int currentHp, int maxHp)
+    [SerializeField] private float maxHealth;
+    [SerializeField] private float currentHealth;
+    [SerializeField] private Slider easeHealthSlider;
+    [SerializeField]private float lerpSpeed;
+    private void Start()
     {
-        var ratio=currentHp/maxHp;
-        healthBar.value = ratio;
+        currentHealth = maxHealth;
+    }
+    private void Update()
+    {
+        if (healthBar.value != currentHealth)
+        {
+            healthBar.value = currentHealth;
+        }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            takeDamage(10);
+        }
+        if(healthBar.value != easeHealthSlider.value)
+        {
+            easeHealthSlider.value = Mathf.Lerp(easeHealthSlider.value, currentHealth, lerpSpeed);
+        }
+    }
+    void takeDamage(int damage)
+    {
+        currentHealth -= damage;
     }
 }
