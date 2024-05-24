@@ -35,11 +35,14 @@ public class MoveByKey2 : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
             anim.SetBool("isWalking", true);
         }
+        else if (Input.GetKeyUp(KeyCode.LeftArrow)|| Input.GetKeyUp(KeyCode.RightArrow)|| Input.GetKeyUp(KeyCode.UpArrow)|| Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            anim.SetBool("isWalking", false);
+        }
         else
         {
             anim.SetBool("isWalking", false);
         }
-       
         CheckAnimation();
     }
 
