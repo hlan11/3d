@@ -14,6 +14,7 @@ public class EnemyAI : MonoBehaviour
     public NavMeshAgent Agent => agent;
     public EnemyAttack EnemyAttack => enemyAttack;
     private EnemyStateMachine m_enemySM = null;
+    public Transform spawnPos;
     private void Start()
     {
         m_enemySM=new EnemyStateMachine(this);

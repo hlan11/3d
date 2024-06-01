@@ -16,7 +16,7 @@ public class EnemyAttack : MonoBehaviour
     {
         anim.SetBool("isAttacking", true);
     }
-    public void StopAttacking()
+    public void StopAttack()
     {
         anim.SetBool("isAttacking", false);
     }
