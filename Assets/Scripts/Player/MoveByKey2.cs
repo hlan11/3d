@@ -25,8 +25,8 @@ public class MoveByKey2 : MonoBehaviour
         // Tạo vector di chuyển dựa trên input
         movement = new Vector3(horizontal, 0, vertical).normalized;
 
-        // Cập nhật parameter "Speed" của Animator dựa trên độ lớn của vector movement
-        anim.SetFloat("Speed", movement.magnitude);
+        //// Cập nhật parameter "Speed" của Animator dựa trên độ lớn của vector movement
+        //anim.SetFloat("Speed", movement.magnitude);
 
         // Nếu có di chuyển, thực hiện quay nhân vật theo hướng di chuyển
         if (movement.magnitude > 0)
@@ -50,7 +50,6 @@ public class MoveByKey2 : MonoBehaviour
     {
         // Di chuyển nhân vật sử dụng CharacterController
         characterController.Move(movement * movingSpeed * Time.fixedDeltaTime);
-
     }
     void CheckAnimation()
     {

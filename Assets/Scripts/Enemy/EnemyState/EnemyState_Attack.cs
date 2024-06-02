@@ -8,7 +8,7 @@ public class EnemyState_Attack : BaseFSMState
     private EnemyStateMachine _enemySM;
     public override void Enter()
     {
-        Debug.Log("============ Enemy Attaack===========");
+        Debug.Log("============ Enemy Attack===========");
         if (_enemySM == null)
         {
             _enemySM = (EnemyStateMachine)GetStateMachine();

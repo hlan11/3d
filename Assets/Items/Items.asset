@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4e523079375d284aba258092dfc2321, type: 3}
+  m_Name: Items
+  m_EditorClassIdentifier: 
+  items:
+  - itemName: HealthPotion
+    Health: 20
+    Mana: 0
+    coins: 0
+    Armor: 0
+    icon: {fileID: -1464742250, guid: b7aa375b2f7d8ad4995cb75b8cf19937, type: 3}
+  - itemName: ManaPotion
+    Health: 0
+    Mana: 10
+    coins: 0
+    Armor: 0
+    icon: {fileID: 21300000, guid: 62894240259618044832f631411a291d, type: 3}
+  - itemName: ArmorPotion
+    Health: 0
+    Mana: 0
+    coins: 0
+    Armor: 20
+    icon: {fileID: 21300000, guid: 249f7ff8780d8664a974fb984bb144a0, type: 3}
+  - itemName: Coin
+    Health: 0
+    Mana: 0
+    coins: 50
+    Armor: 0
+    icon: {fileID: -8369918138995712631, guid: 7a64d093929a4bc45ae1993d93258ee0, type: 3}
