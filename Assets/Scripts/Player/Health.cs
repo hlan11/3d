@@ -5,30 +5,50 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 public class Health :  MonoBehaviour
 {
+    [SerializeField] private Animator anim;
     [SerializeField] private UnityEvent onDie;
-    public UnityEvent<int, int> OnHealthChanged;
-    public int maxHP;
-    private int _healthpoint;
+
+    public UnityEvent<int, int> onHealthChanged;
+    public int MaxHP;
+
+    private int _healthPoint;
 
     public int HealthPoint
     {
-        get => _healthpoint;
+        get => _healthPoint;
         set
         {
-            _healthpoint = value;
-            OnHealthChanged.Invoke(_healthpoint, maxHP);
+            _healthPoint = value;
+            onHealthChanged.Invoke(_healthPoint, MaxHP);
         }
+
     }
-    private bool isDead=> _healthpoint <= 0;
+
+    private bool IsDead => _healthPoint <= 0;
+
     protected virtual void Start()
     {
-        _healthpoint = maxHP;
+        _healthPoint = MaxHP;
     }
-    public void OnCollisionEnter(Collision collision)
+
+    public void TakeDamage(int damage)
     {
-        if (collision.collider.CompareTag("Obstacle"))
+        if (IsDead) return;
+        HealthPoint -= damage;
+        Debug.Log("========== Enemy attacked !");
+        if (IsDead)
         {
-            _healthpoint -= 10;
+            Die();
         }
     }
+
+    protected virtual void Die()
+    {
+        if (anim != null)
+        {
+            anim.SetTrigger("Die");
+        }
+        onDie.Invoke();
+    }
+
 }

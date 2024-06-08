@@ -40,6 +40,7 @@ public class EnemyAI : MonoBehaviour
     }
     public void TracePlayer()
     {
+       
         object[] args = new object[1];
         args[0] = "Trace";
         m_enemySM.BroadcastMessage(args);

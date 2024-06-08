@@ -5,7 +5,8 @@ using UnityEngine;
 public class Player : Singleton<Player>
 {
     [SerializeField] private Transform playerFoot;
-    [SerializeField] private HealthBar playerHealth;
+   
+    [SerializeField] private Health healthPlayer;
     public Transform PlayerFoot=> playerFoot;
-    public HealthBar PlayerHealth => playerHealth;
+    public Health PlayerHealth => healthPlayer;
 }

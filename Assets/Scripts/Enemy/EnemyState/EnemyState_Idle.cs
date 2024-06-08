@@ -8,11 +8,12 @@ using Palmmedia.ReportGenerator.Core;
 public class EnemyState_Idle : BaseFSMState
 {
     private EnemyStateMachine _enemySM;
+
     private Transform _patrolCenter;
-    public float patrolRadius;
-    public float minDistanceToTarget;
-    public float stoppingDistance;
-    public float speed;
+    public float patrolRadius = 10f;
+    public float minDistanceToTarget = 2f;
+    public float stoppingDistance = 1f;
+    public float speed = 3f;
     private NavMeshAgent _agent;
     public override void Enter()
     {
@@ -50,6 +51,7 @@ public class EnemyState_Idle : BaseFSMState
          Debug.Log("============ State Idle receved message : " + args.ToString());
         if (args.Length == 1 && (string)args[0] == "Trace")
         {
+            Debug.Log("====== switch trace player");
             DoTransition(typeof(EnemyState_Trace));
         }
     }

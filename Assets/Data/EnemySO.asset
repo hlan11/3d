@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: EnemySO
   m_EditorClassIdentifier: 
   HP: 100
-  damage: 10
+  Damage: 10
   speed: 5

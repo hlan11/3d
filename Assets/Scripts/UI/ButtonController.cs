@@ -30,7 +30,7 @@ public class ButtonController : MonoBehaviour
             if (_itemdata.itemName == "HealthPotion")
             {
                 Debug.Log("-------Use Health Potion + Health ------------------");
-                _playerHealth.currentHealth += _itemdata.Health;
+                //_playerHealth.currentHealth += _itemdata.Health;
             }
             if (_itemdata.itemName == "ArmorPotion" )
             {

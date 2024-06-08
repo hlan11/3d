@@ -8,7 +8,7 @@ public class EnemyState_Attack : BaseFSMState
     private EnemyStateMachine _enemySM;
     public override void Enter()
     {
-        Debug.Log("============ Enemy Attack===========");
+        Debug.Log("============ Enemy Attack  ===========");
         if (_enemySM == null)
         {
             _enemySM = (EnemyStateMachine)GetStateMachine();
@@ -19,7 +19,7 @@ public class EnemyState_Attack : BaseFSMState
     {
         _enemySM.EnemyAI.Agent.SetDestination(Player.Instance.PlayerFoot.transform.position);
 
-        if (Vector3.Distance(_enemySM.EnemyAI.transform.position, _enemySM.EnemyAI.spawnPos.position) > 30f)
+        if (Vector3.Distance(_enemySM.EnemyAI.transform.position, _enemySM.EnemyAI.spawnPos.position) > 10f)
         {
             DoTransition(typeof(EnemyState_Retreat));
         }
