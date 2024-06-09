@@ -9,6 +9,9 @@ public class EnemyAttack : MonoBehaviour
 
     private Health playerHealth;
     bool isAttack;
+
+    private EnemyStateMachine _enemySM;
+    private Player _player;
     private void Start()
     {
         playerHealth = Player.Instance.PlayerHealth;
@@ -27,7 +30,12 @@ public class EnemyAttack : MonoBehaviour
     {
         anim.SetBool("isAttacking", false);
         anim.SetBool("isWalking", true);
-        isAttack = false;
+        //isAttack = false;
+        if (Vector3.Distance(_enemySM.EnemyAI.transform.position, _player.PlayerFoot.transform.position) > 1.0f && isAttack)
+        {
+            Debug.Log("------------isAttack == false=============");
+            isAttack = false;
+        }
     }
     public void OnAttack()
     {
