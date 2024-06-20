@@ -17,6 +17,7 @@ public class ItemObject : MonoBehaviour
             Inventory.instance.addItem(itemData);
             Debug.Log("Pick Up item " + itemData.name + " Health = " + itemData.Health+ " Mana = " + itemData.Mana+ " Armor = " + itemData.Armor+ " Coin = " + itemData.coins);
             Destroy(gameObject);
+            MissionManager.Instance.CollectPotion();
         }
     }
    
