@@ -5,6 +5,7 @@ using UnityEngine;
 public class ItemObject : MonoBehaviour
 {
     [SerializeField] private ItemData itemData;
+    
     private void Start()
     {
         GetComponent<SpriteRenderer>().sprite = itemData.icon;
@@ -20,7 +21,8 @@ public class ItemObject : MonoBehaviour
             if (itemData.name == "HealthPotion")
             {
                 MissionManager.Instance.CollectPotion();
-                Debug.Log("Potion Colected ++");
+                
+                Debug.Log("Potion Collected ++");
             }
         }
     }

@@ -12,6 +12,10 @@ public class GameManager : Singleton<GameManager>
     {
         currentLevel = 1;
     }
+    public void PlayGame()
+    {
+        SceneManager.LoadScene("5.5");
+    }
     public void OnGameover()
     {
         Time.timeScale = 0;

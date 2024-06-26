@@ -9,13 +9,22 @@ public class MoveByKey2 : MonoBehaviour
     private Animator anim;
     private CharacterController characterController;
     private Vector3 movement;
+    [Header("Sound")]
+    [SerializeField] private AudioSource pickupItemSound;
+    [SerializeField] private AudioSource attackSound;
 
     void Start()
     {
         anim = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
     }
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Item"))
+        {
+            pickupItemSound.Play();
+        }
+    }
     void Update()
     {
         // Lấy input từ bàn phím
@@ -44,6 +53,10 @@ public class MoveByKey2 : MonoBehaviour
             anim.SetBool("isWalking", false);
         }
         CheckAnimation();
+        if (Input.GetMouseButtonDown(0))
+        {
+            attackSound.Play();
+        }
     }
 
     void FixedUpdate()
