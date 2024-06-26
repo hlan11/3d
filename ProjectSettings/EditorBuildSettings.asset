@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/SceneGame/MainMenu.unity
     guid: b0766e9763959aa40804a57ba3ad3790
   - enabled: 1
-    path: Assets/SceneGame/14.4.unity
-    guid: a3be6aa5601590f48b41379437b6316b
+    path: Assets/SceneGame/5.5.unity
+    guid: 27915ac565aadf048b89a94d619c501d
   m_configObjects: {}

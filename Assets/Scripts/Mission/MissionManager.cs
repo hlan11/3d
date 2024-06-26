@@ -15,8 +15,19 @@ public class MissionManager : Singleton<MissionManager>
     private IEnumerator VerifyPotionCollected()
     {
         currentPotionCollected = 0;
-        textMission.text = $"Collect {requiredPotion} Potion " +$"------ Collected {currentPotionCollected} potion";
+        textMission.text = $"Your mission : Collect {requiredPotion} Red Potion " + $"------ Collected {currentPotionCollected} Red Potion";
         yield return new WaitUntil(()=>isMissionCompleted());
+    }
+    private void Start()
+    {
+        InitMisson();
+        StartCoroutine(VerifyMission());
+    }
+    private IEnumerator VerifyMission()
+    {
+        yield return VerifyPotionCollected();
+        yield return VerifyPlayerExit();
+        GameManager.Instance.OnMissionCompleted();
     }
     private IEnumerator VerifyPlayerExit()
     {
@@ -28,8 +39,8 @@ public class MissionManager : Singleton<MissionManager>
     public void CollectPotion()
     {
         currentPotionCollected++;
-        textMission.text = $"Collect {requiredPotion} Potion " + $"------ Collected {currentPotionCollected} potion";
-        Debug.Log("---------------------Potion Collected-----------------------");
+        textMission.text = $"Your mission : Collect {requiredPotion} Potion " + $"------ Collected {currentPotionCollected} Potion";
+        //Debug.Log("---------------------Potion Collected-----------------------");
     }
     private void InitMisson()
     {

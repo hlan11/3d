@@ -7,6 +7,11 @@ public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private GameObject PanelGameOver;
     [SerializeField]private GameObject PanelGameWin;
+    public int currentLevel;
+    private void Start()
+    {
+        currentLevel = 1;
+    }
     public void OnGameover()
     {
         Time.timeScale = 0;
