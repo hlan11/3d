@@ -20,6 +20,7 @@ public class MissionManager : Singleton<MissionManager>
     }
     private void Start()
     {
+        textMission.text = $"Your mission : Collect {requiredPotion} Potion " + $"------ Collected {currentPotionCollected} Potion";
         InitMisson();
         StartCoroutine(VerifyMission());
     }
@@ -45,7 +46,7 @@ public class MissionManager : Singleton<MissionManager>
     private void InitMisson()
     {
         var index = GameManager.Instance.currentLevel - 1;
-        var collectPotionMission = missionSO.listMission[index].PotionCollected;
+        var collectPotionMission = missionSO.listMission[index].PotionRequired;
         requiredPotion = collectPotionMission;
     }
     private bool isMissionCompleted()

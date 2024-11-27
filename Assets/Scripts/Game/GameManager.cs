@@ -7,10 +7,12 @@ public class GameManager : Singleton<GameManager>
 {
     [SerializeField] private GameObject PanelGameOver;
     [SerializeField]private GameObject PanelGameWin;
+    [SerializeField] private GameObject instructionPanel;
     public int currentLevel;
     private void Start()
     {
-        currentLevel = 1;
+        currentLevel = 0;
+        instructionPanel.SetActive(false);
     }
     public void PlayGame()
     {

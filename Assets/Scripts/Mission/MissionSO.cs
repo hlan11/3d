@@ -9,5 +9,5 @@ public class MissionSO : ScriptableObject
 [System.Serializable]
 public class MissionInfor
 {
-    public int PotionCollected;
+    public int PotionRequired;
 }
