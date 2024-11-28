@@ -689,7 +689,8 @@ MonoBehaviour:
   IsDontDestroyOnload: 0
   PanelGameOver: {fileID: 1123553703}
   PanelGameWin: {fileID: 0}
-  currentLevel: 0
+  instructionPanel: {fileID: 0}
+  currentLevel: 2
 --- !u!4 &39780556
 Transform:
   m_ObjectHideFlags: 0
@@ -3356,7 +3357,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4922,8 +4923,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.19053721, y: 0.11618682, z: 1.0495449}
-  m_Center: {x: -0.12134168, y: 0.023786725, z: 0.31569958}
+  m_Size: {x: 0.14429826, y: 0.08384056, z: 0.91590935}
+  m_Center: {x: -0.14446115, y: 0.007613827, z: 0.3825174}
 --- !u!1 &326665859 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8741910233246317594, guid: 05b70bb637c1de5458361cdbe2cab1a2, type: 3}
@@ -14367,7 +14368,7 @@ MonoBehaviour:
   spawnInterval: 1
   spawnRadius: 2
   color: {r: 1, g: 0.25516567, b: 0, a: 1}
-  traceDistance: 5
+  traceDistance: 3
 --- !u!1001 &861956094
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20534,7 +20535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8072014167217623078, guid: a4140530cfba26e4f88f22ea8174b6f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.357
+      value: 1.36
       objectReference: {fileID: 0}
     - target: {fileID: 8072014167217623078, guid: a4140530cfba26e4f88f22ea8174b6f4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -28069,6 +28070,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1450112240837540, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
     - target: {fileID: 4325524258668146, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -28124,6 +28129,10 @@ PrefabInstance:
     - target: {fileID: 4807772044541664, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4962040762834882, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.994
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

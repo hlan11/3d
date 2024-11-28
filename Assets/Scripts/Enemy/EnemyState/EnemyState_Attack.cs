@@ -11,6 +11,7 @@ public class EnemyState_Attack : BaseFSMState
         Debug.Log("============ Enemy Attack  ===========");
         if (_enemySM == null)
         {
+            Debug.Log("---------Enemy ==null===============");
             _enemySM = (EnemyStateMachine)GetStateMachine();
         }
         _enemySM.EnemyAI.EnemyAttack.StartAttack();
@@ -35,4 +36,5 @@ public class EnemyState_Attack : BaseFSMState
             DoTransition(typeof(EnemyState_Retreat));
         }
     }
+    
 }

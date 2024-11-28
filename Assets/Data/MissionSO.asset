@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: MissionSO
   m_EditorClassIdentifier: 
   listMission:
-  - PotionCollected: 4
+  - PotionCollected: 3

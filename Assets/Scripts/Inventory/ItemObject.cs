@@ -8,7 +8,7 @@ public class ItemObject : MonoBehaviour
     
     private void Start()
     {
-        GetComponent<SpriteRenderer>().sprite = itemData.icon;
+        //GetComponent<SpriteRenderer>().sprite = itemData.icon;
         gameObject.name= itemData.name;
     }
     private void OnTriggerEnter(Collider other)

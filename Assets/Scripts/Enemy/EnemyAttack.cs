@@ -44,4 +44,8 @@ public class EnemyAttack : MonoBehaviour
             playerHealth.TakeDamage(EnemySO.Damage);
         }
     }
+    public void DetectEnemyPlayer()
+    {
+        Debug.Log("--------------------Enemy attack player----------------------");
+    }
 }

@@ -12,23 +12,15 @@ public class MissionManager : Singleton<MissionManager>
     private int requiredPotion;
     private int currentPotionCollected;
     private bool isPlayerExit;
+    private void Start()
+    {
+        InitMisson();
+    }
     private IEnumerator VerifyPotionCollected()
     {
         currentPotionCollected = 0;
-        textMission.text = $"Your mission : Collect {requiredPotion} Red Potion " + $"------ Collected {currentPotionCollected} Red Potion";
-        yield return new WaitUntil(()=>isMissionCompleted());
-    }
-    private void Start()
-    {
-        textMission.text = $"Your mission : Collect {requiredPotion} Potion " + $"------ Collected {currentPotionCollected} Potion";
-        InitMisson();
-        StartCoroutine(VerifyMission());
-    }
-    private IEnumerator VerifyMission()
-    {
-        yield return VerifyPotionCollected();
-        yield return VerifyPlayerExit();
-        GameManager.Instance.OnMissionCompleted();
+        textMission.text = $"Collect {requiredPotion} Red Potion " + $"------ Collected {currentPotionCollected} potion";
+        yield return new WaitUntil(() => isMissionCompleted());
     }
     private IEnumerator VerifyPlayerExit()
     {
@@ -40,13 +32,13 @@ public class MissionManager : Singleton<MissionManager>
     public void CollectPotion()
     {
         currentPotionCollected++;
-        textMission.text = $"Your mission : Collect {requiredPotion} Potion " + $"------ Collected {currentPotionCollected} Potion";
-        //Debug.Log("---------------------Potion Collected-----------------------");
+        textMission.text = $"Collect {requiredPotion} Potion " + $"------ Collected {currentPotionCollected} potion";
+        Debug.Log("---------------------Potion Collected-----------------------");
     }
     private void InitMisson()
     {
         var index = GameManager.Instance.currentLevel - 1;
-        var collectPotionMission = missionSO.listMission[index].PotionRequired;
+        var collectPotionMission = missionSO.listMission[index].PotionCollected;
         requiredPotion = collectPotionMission;
     }
     private bool isMissionCompleted()

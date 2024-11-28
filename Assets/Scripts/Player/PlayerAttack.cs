@@ -29,4 +29,8 @@ public class PlayerAttack : MonoBehaviour
             _enemyHealth.TakeDamage(10);
         }
     }
+    public void TakeDamageEvent()
+    {
+        Debug.Log("Trigger Event");
+    }
 }
