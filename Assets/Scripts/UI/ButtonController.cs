@@ -11,6 +11,17 @@ public class ButtonController : MonoBehaviour
      private HealthBar _playerHealth;
      [SerializeField] private ItemData _itemData;
     private ItemData _itemdata;
+    [SerializeField] private GameObject panelInstruction;
+    public void showInstruction()
+    {
+        Debug.Log("button how to play pressed");
+        panelInstruction.SetActive(true);
+    }
+    public void hideInstruction()
+    {
+        Debug.Log("button close tutorial pressed");
+        panelInstruction.SetActive(false);
+    }
     public void resumeButton()
     {
         Time.timeScale = 1;
@@ -50,6 +61,11 @@ public class ButtonController : MonoBehaviour
             Debug.Log("==================Object null===========================");
             return;
         }
+    }
+    public void playGame()
+    {
+        Debug.Log("play button was pressed");
+        SceneManager.LoadScene(1);
     }
     public void exitGame()
     {

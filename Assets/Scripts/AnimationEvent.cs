@@ -4,8 +4,5 @@ using UnityEngine;
 
 public class AnimationEvent : MonoBehaviour
 {
-    public void TriggerEvent()
-    {
-        Debug.Log("Trigger Event");
-    }
+    
 }
