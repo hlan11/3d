@@ -17,7 +17,7 @@ public class EnemyState_Idle : BaseFSMState
     private NavMeshAgent _agent;
     public override void Enter()
     {
-        Debug.Log("-------------------Enter State Idle --------------------");
+ 
         if (_enemySM == null)
         {
             _enemySM = (EnemyStateMachine)GetStateMachine();

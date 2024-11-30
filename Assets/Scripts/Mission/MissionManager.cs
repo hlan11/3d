@@ -33,7 +33,7 @@ public class MissionManager : Singleton<MissionManager>
     {
         currentPotionCollected++;
         textMission.text = $"Collect {requiredPotion} Potion " + $"------ Collected {currentPotionCollected} potion";
-        Debug.Log("---------------------Potion Collected-----------------------");
+
     }
     private void InitMisson()
     {

@@ -22,7 +22,7 @@ public class ItemObject : MonoBehaviour
             {
                 MissionManager.Instance.CollectPotion();
                 
-                Debug.Log("Potion Collected ++");
+          
             }
         }
     }

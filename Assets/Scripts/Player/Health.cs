@@ -21,7 +21,6 @@ public class Health :  MonoBehaviour
             _healthPoint = value;
             onHealthChanged.Invoke(_healthPoint, MaxHP);
         }
-
     }
 
     private bool IsDead => _healthPoint <= 0;
@@ -35,13 +34,12 @@ public class Health :  MonoBehaviour
     {
         if (IsDead) return;
         HealthPoint -= damage;
-        Debug.Log("========== Enemy attacked !");
+        //Debug.Log("========== Enemy attacked !");
         if (IsDead)
         {
             Die();
         }
     }
-
     protected virtual void Die()
     {
         if (anim != null)
@@ -50,5 +48,4 @@ public class Health :  MonoBehaviour
         }
         onDie.Invoke();
     }
-
 }

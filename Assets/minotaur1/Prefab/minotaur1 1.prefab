@@ -146,6 +146,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 7740221759800399432}
   EnemySO: {fileID: 11400000, guid: 5cd2c50ae0a6fed409e8b46731426c7d, type: 2}
+  sphereRadius: 1.94
+  maxDistance: 0.54
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  currentHitObject: {fileID: 0}
 --- !u!136 &8048610782976945966
 CapsuleCollider:
   m_ObjectHideFlags: 0

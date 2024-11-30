@@ -43,7 +43,6 @@ public class EnemySpawner : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("-------------Player In -----------------");
             for (int i = 0; i < _listEnemyAI.Count; i++)
             {
                 if (Vector3.Distance(other.transform.position, _listEnemyAI[i].transform.position) <= traceDistance)

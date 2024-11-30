@@ -36,5 +36,4 @@ public class EnemyState_Attack : BaseFSMState
             DoTransition(typeof(EnemyState_Retreat));
         }
     }
-    
 }

@@ -5913,6 +5913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelPauseGame: {fileID: 299470789}
   _itemData: {fileID: 0}
+  panelInstruction: {fileID: 0}
 --- !u!114 &391481987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8496,6 +8497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelPauseGame: {fileID: 0}
   _itemData: {fileID: 11400000, guid: e3bb510e4bd2e4b40a33832605387d20, type: 2}
+  panelInstruction: {fileID: 0}
 --- !u!4 &522240294
 Transform:
   m_ObjectHideFlags: 0
@@ -9507,6 +9509,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 584880287}
   isAttacking: 0
+  sphereRadius: 0
+  maxDistance: 0
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  currentHitObject: {fileID: 0}
 --- !u!82 &584880292
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12139,6 +12147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelPauseGame: {fileID: 1123553703}
   _itemData: {fileID: 0}
+  panelInstruction: {fileID: 0}
 --- !u!114 &729283251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15381,7 +15390,7 @@ Transform:
   m_GameObject: {fileID: 894648898}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.15, y: 1.453, z: -0.658}
+  m_LocalPosition: {x: 0, y: 1.241, z: 0.342}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16303,6 +16312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelPauseGame: {fileID: 299470789}
   _itemData: {fileID: 0}
+  panelInstruction: {fileID: 0}
 --- !u!114 &974134684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23407,6 +23417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelPauseGame: {fileID: 299470789}
   _itemData: {fileID: 0}
+  panelInstruction: {fileID: 0}
 --- !u!114 &1420692636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23870,6 +23881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelPauseGame: {fileID: 0}
   _itemData: {fileID: 0}
+  panelInstruction: {fileID: 0}
 --- !u!1 &1442228770 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4141477301158711593, guid: 7a9c2872915ad414e83307c9864abb76, type: 3}
@@ -25096,6 +25108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panelPauseGame: {fileID: 0}
   _itemData: {fileID: 0}
+  panelInstruction: {fileID: 0}
 --- !u!114 &1501113370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28100,7 +28113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4807772044541664, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.312
+      value: -0.384
       objectReference: {fileID: 0}
     - target: {fileID: 4807772044541664, guid: f018c9b8a16f9c3449b1c025f1a66ce4, type: 3}
       propertyPath: m_LocalRotation.w
