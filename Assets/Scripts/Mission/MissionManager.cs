@@ -15,6 +15,12 @@ public class MissionManager : Singleton<MissionManager>
     private void Start()
     {
         InitMisson();
+        StartCoroutine(VerifyMission());
+    }
+    IEnumerator VerifyMission()
+    {
+        yield return VerifyPotionCollected();
+        yield return VerifyPlayerExit();
     }
     private IEnumerator VerifyPotionCollected()
     {
@@ -24,7 +30,7 @@ public class MissionManager : Singleton<MissionManager>
     }
     private IEnumerator VerifyPlayerExit()
     {
-        textMission.text = $"Mission Completed , find exit door";
+        textMission.text = $"Mission Completed , go to treasure ";
         exitDoor.onPlayerEnter.AddListener(OnPlayerExit);
         yield return new WaitUntil(() => isPlayerExit);
         exitDoor.onPlayerEnter.RemoveListener(OnPlayerExit);
@@ -32,7 +38,7 @@ public class MissionManager : Singleton<MissionManager>
     public void CollectPotion()
     {
         currentPotionCollected++;
-        textMission.text = $"Collect {requiredPotion} Potion " + $"------ Collected {currentPotionCollected} potion";
+        textMission.text = $"Collect {requiredPotion} Red Potion " + $"------ Collected {currentPotionCollected} potion";
 
     }
     private void InitMisson()
